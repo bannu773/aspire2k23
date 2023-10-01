@@ -1,0 +1,530 @@
+<?PHP
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ASPIRE | Register</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/Registerstyle.css">
+  <script src="register.js"></script>
+  <style>
+    @media only screen and (max-width: 600px) {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .hide {
+      display: none;
+    }
+
+    @font-face {
+      font-family: aspirenasrg;
+      src: url(fonts/nasalization-rg.ttf);
+    }
+
+    body{
+      font-family: aspirenasrg;
+      font-weight: 900;
+    }
+
+  </style>
+</head>
+
+<!-- <body>
+  <div class="jumbotron jumbotron-fluid backimg "
+    style=" background-image: url('temp-bg.png'); background-size:contain,cover; background-repeat: repeat-x;background-color:#222222">
+
+    <div class="row">
+      <div class=" register1">
+        <a href="./index.html" id="ff12" style="color: white; font-size: 1.7rem;text-decoration:none;"><i
+            class="fas fa-angle-left"></i> Register</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box1">
+    <p class="text-white ">Minimum of 1 members required. Maximum of 4</p>
+  </div>
+  --------------------------------------------------------------------------------------------------------
+  <form method="post" action="./registerdata.php" name="register" onsubmit="return validate()">
+    <div id="div">
+      <div class="form1" style="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label class="text-white" style="">Name</label>
+            <input type="text" class="form-control" id="names" name="name1" placeholder="Aditya.."
+              style="hight:-5%;background-color:#373737;border-color:#373737;border-radius:0;color:white;  border-bottom-color:white;"
+              required>
+          </div>
+          <div class="form-group col-md-6 ">
+            <label for="inputPassword4" class="text-white">E-mail</label>
+            <input type="email" class="form-control" id="emails" name="email1" placeholder="aspireaitam@gmail.com"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label class="text-white">Phone Number</label>
+            <input type="tel" class="form-control" id="inputEmail4" name="phonenumber1"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              placeholder="Pattern:9491694195 " pattern="[0-9]{10}" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState" class="text-white">Branch</label>
+            <select id="inputState" class="form-control" name="branch1"
+              style="background-color:#373737;color:white;border-color:#373737;border-radius:0;border-bottom-style:2px;border-bottom-color:white;"
+              required>
+              <option value="" selected>Choose</option>
+              <option value="CSE">CSE</option>
+              <option value="ECE">ECE</option>
+              <option value="IT">IT</option>
+              <option value="EEE">EEE</option>
+              <option value="CIVIL">CIVIL</option>
+              <option value="MECH">MECH</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputState" class="text-white">Event Name</label>
+            <select id="inputState" class="form-control" name="eventname"
+              style="background-color:#373737;color:white;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              required>
+              <option value="" selected>Choose</option>
+              <option value="Code Fiesta">Code Fiesta</option>
+              <option value="Web Combat">Web Combat</option>
+              <option value="Code Maker">Code Maker</option>
+              <option value="E-Quiz">E-Quiz</option>
+              <option value="Query Designer">Query Designer</option>
+              <option value="Float An Idea">Float An Idea</option>
+              <option value="Web Mantra">Web Mantra</option>
+              <option value="Debugging">Debugging</option>
+              <option value="Drone Race">Drone Race</option>
+              <option value="Boat Propulsion/Weldathon">Boat Propulsion/Weldathon</option>
+              <option value="Robo Chase">Robo Chase</option>
+              <option value="Circuit Building">Circuit Building</option>
+              <option value="Pick and Talk">Pick and Talk</option>
+              <option value="Circuit Buzz">Circuit Buzz</option>
+              <option value="Tech Tive">Tech Tive</option>
+              <option value="Sclupture Your Smart Town">Sclupture Your Smart Town</option>
+              <option value="CAD Delinator">CAD Delinator</option>
+              <option value="Paper Presentation">Paper Presentation</option>
+              <option value="Project Expo">Project Expo</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label class="text-white" style="">Referral ID</label>
+            <input type="text" class="form-control" id="names" name="referral_id"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;  border-bottom-color:white;"
+              placeholder="Not Mandatory">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="inputEmail4" class="text-white"> Student College/Institution Name</label>
+            <input type="text" class="form-control" id="clgname" name="collegename"
+              placeholder="Enter/Select College/Institution Name " list="cityname"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              required>
+            <datalist id="cityname">
+              <option value="Aditya Institute of Technology and Management,Tekkali.">
+            </datalist>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1" style="" name="accommodation1"
+                value="YES">
+              <label class="form-check-label text-white" for="gridCheck1">
+                Accommodation required
+              </label>
+              ---------------------------------------------- Modal -------------------------------------
+              <a href="" class="text-warning " data-toggle="modal" data-target="#exampleModalCenter">View Details</a>
+              ---------------------------------------------- /Modal -------------------------------------
+            </div>
+          </div>
+        </div>
+        <br><br>
+
+      </div><br>
+      <br><br>
+      <input id="AddButton" type="button" class="btn btn-primary "
+        style="background:#222039;border-color:#323dd1;border-radius:0; margin-left: 42%;" value="Add Member"
+        onclick="show2();" />
+    </div>
+
+    --------------------------------------------------------
+
+    <div id="div1" class="hide">
+      <br><br>
+      <div class="box1">
+        <p class="text-white ">2/4 members are participating</p>
+
+      </div>
+      <div class="form1" style="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4" class="text-white" style="">Name</label>
+            <input type="text" class="form-control" id="names" name="name2"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;  border-bottom-color:white;">
+          </div>
+          <div class="form-group col-md-6 ">
+            <label for="inputPassword4" class="text-white">E-mail</label>
+            <input type="email" class="form-control" id="emails" name="email2"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4" class="text-white">Phone Number</label>
+            <input type="tel" class="form-control" id="number" name="phonenumber2"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              pattern="[0-9]{10}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState" class="text-white">Branch</label>
+            <select id="inputState" class="form-control" name="branch2"
+              style="background-color:#373737;color:white;border-color:#373737;border-radius:0;border-bottom-style:2px;border-bottom-color:white;">
+              <option selected>Choose</option>
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>IT</option>
+              <option>EEE</option>
+              <option>CIVIL</option>
+              <option>MECH</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck2" style="" name="accommodation2"
+                value="YES">
+              <label class="form-check-label text-white" for="gridCheck2">
+                Accommodation required
+              </label>
+              ---------------------------------------------- Modal ---------------------------------------
+              <a href="" class="text-warning " data-toggle="modal" data-target="#exampleModalCenter">View Details</a>
+              ----------------------------------------------- /Modal --------------------------------------
+            </div>
+          </div>
+        </div>
+
+      </div><br>
+
+      <input id="AddButton2" type="button" class="btn btn-primary "
+        style="background:#222039;border-color:#323dd1;border-radius:0;margin-left: 42%;" value="Add Member"
+        onclick="show3();" />
+
+    </div>
+
+    --------------------------------------------------------
+    <div id="div2" class="hide">
+      <br><br>
+      <div class="box1">
+        <p class="text-white ">3/4 members are participating</p>
+
+      </div>
+      <div class="form1" style="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4" class="text-white" style="">Name</label>
+            <input type="text" class="form-control" id="names" name="name3"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;  border-bottom-color:white;">
+          </div>
+          <div class="form-group col-md-6 ">
+            <label for="inputPassword4" class="text-white">E-mail</label>
+            <input type="email" class="form-control" id="emails" name="email3"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4" class="text-white">Phone Number</label>
+            <input type="tel" class="form-control" id="inputEmail4" name="phonenumber3"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              pattern="[0-9]{10}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState" class="text-white">Branch</label>
+            <select id="inputState" class="form-control" name="branch3"
+              style="background-color:#373737;color:white;border-color:#373737;border-radius:0;border-bottom-style:2px;border-bottom-color:white;">
+              <option selected>Choose</option>
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>IT</option>
+              <option>EEE</option>
+              <option>CIVIL</option>
+              <option>MECH</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck3" style="" name="accommodation3"
+                value="YES">
+              <label class="form-check-label text-white" for="gridCheck3">
+                Accommodation required
+              </label>
+              ----------------------------------------------- Modal -------------------------------------
+              <a href="" class="text-warning " data-toggle="modal" data-target="#exampleModalCenter">View Details</a>
+              ----------------------------------------------- /Modal --------------------------------------
+            </div>
+          </div>
+        </div>
+
+
+      </div><br>
+      <input id="AddButton3" type="button" class="btn btn-primary "
+        style="background:#222039;border-color:#323dd1;border-radius:0;margin-left: 42%;" value="Add Member"
+        onclick="show4();" />
+    </div>
+
+    ---------------------------------------------------------
+    <div id="div3" class="hide">
+      <br><br>
+      <div class="box1">
+        <p class="text-white ">4/4 members are participating.</p>
+
+      </div>
+      <div class="form1" style="">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4" class="text-white" style="">Name</label>
+            <input type="text" class="form-control" id="names" name="name4"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;  border-bottom-color:white;">
+          </div>
+          <div class="form-group col-md-6 ">
+            <label for="inputPassword4" class="text-white">E-mail</label>
+            <input type="email" class="form-control" id="emails" name="email4"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4" class="text-white">Phone Number</label>
+            <input type="tel" class="form-control" id="inputEmail4" name="phonenumber4"
+              style="background-color:#373737;border-color:#373737;border-radius:0;color:white;border-bottom-style:2px;border-bottom-color:white;"
+              pattern="[0-9]{10}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState" class="text-white">Branch</label>
+            <select id="inputState" class="form-control" name="branch4"
+              style="background-color:#373737;color:white;border-color:#373737;border-radius:0;border-bottom-style:2px;border-bottom-color:white;">
+              <option selected>Choose</option>
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>IT</option>
+              <option>EEE</option>
+              <option>CIVIL</option>
+              <option>MECH</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck4" style="" name="accommodation4"
+                value="YES">
+              <label class="form-check-label text-white" for="gridCheck4">
+                Accommodation required
+              </label>
+              ---------------------------------------------- Modal --------------------------------------
+              <a href="" class="text-warning " data-toggle="modal" data-target="#exampleModalCenter">View Details</a>
+             ------------------------------------------------ /Modal --------------------------------------
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    ----------------------------------------------------------
+
+
+    <script>
+      function show2() {
+
+
+        var name = document.getElementById('names');
+
+        document.getElementById('div1').style.display = 'block';
+        var x = document.getElementById("AddButton");
+        if (x.value == "Add Member")
+          x.value = "Participate Member 2";
+        else
+          x.value = "Add Member";
+      }
+
+
+
+      function show2() {
+        document.getElementById('div1').style.display = 'block';
+        var x = document.getElementById("AddButton");
+        if (x.value == "Participate Member 2") {
+          document.getElementById('div1').style.display = 'none';
+          document.getElementById('div2').style.display = 'none';
+          document.getElementById('div3').style.display = 'none';
+          x.value = "Add Member";
+        }
+
+        else
+          x.value = "Participate Member 2";
+
+        var z = document.getElementById("AddButton2");
+        if (z.value == "Participate Member 3") {
+          z.value = "Add Member";
+        }
+      }
+
+
+      function show3() {
+        document.getElementById('div2').style.display = 'block';
+        var x = document.getElementById("AddButton2");
+        if (x.value == "Add Member")
+          x.value = "Participate Member 3";
+        else
+          x.value = "Add Member";
+      }
+
+      function show3() {
+        document.getElementById('div2').style.display = 'block';
+        var x = document.getElementById("AddButton2");
+        if (x.value == "Participate Member 3") {
+          document.getElementById('div2').style.display = 'none';
+          document.getElementById('div3').style.display = 'none';
+          x.value = "Add Member";
+        }
+
+        else
+          x.value = "Participate Member 3";
+      }
+
+
+
+
+      function show4() {
+        document.getElementById('div3').style.display = 'block';
+        var x = document.getElementById("AddButton3");
+        if (x.value == "Add Member")
+          x.value = "Participate Member 4";
+        else
+          x.value = "Add Member";
+      }
+
+      function show4() {
+        document.getElementById('div3').style.display = 'block';
+        var x = document.getElementById("AddButton3");
+        if (x.value == "Participate Member 4") {
+          document.getElementById('div3').style.display = 'none';
+
+          x.value = "Add Member";
+        }
+
+        else
+          x.value = "Participate Member 4";
+      }
+/*
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                          function show4(){
+                                                                                                                                                                                                            document.getElementById('div3').style.display = 'block';
+                                                                                                                                                                                                            var x = document.getElementById("AddButton3");
+                                                                                                                                                                                                              if (x.value == "Add Member")
+                                                                                                                                                                                                                  x.value = "Participate Member 4";
+                                                                                                                                                                                                              else
+                                                                                                                                                                                                                  x.value = "Add Member";
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          }
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          function show4(){
+                                                                                                                                                                                                            document.getElementById('div3').style.display = 'block';
+                                                                                                                                                                                                            var x = document.getElementById("AddButton3");
+                                                                                                                                                                                                              if (x.value == "Particpate Member 4")
+                                                                                                                                                                                                              {
+                                                                                                                                                                                                                  document.getElementById('div3').style.display = 'none';
+                                                                                                                                                                                                                  x.value = "Add Member";
+                                                                                                                                                                                                              }
+                                                                                                                                                                                                          
+                                                                                                                                                                                                              else
+                                                                                                                                                                                                                  x.value = "Participant Member 4";  
+                                                                                                                                                                                                                  
+                                                                                                                                                                                                          }*/
+
+    </script>
+    <br><br>
+    <div class="row">
+      <div class="col-0.5 submitdiv" style="padding:5px;">
+        <button type="Submit" id="ff12" class="btn" style="color:white;">Submit</button>
+      </div>
+    </div>
+  </form><br>
+  ------------------------------------------------------------------------------------------------------
+  ---------------------------------------------- Modal -------------------------------------
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="background-color:#222222;">
+        <div class="modal-header">
+          <h5 class="modal-title text-warning " id="exampleModalCenterTitle">Accommodation Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-warning">
+          Accommodation cost per day is &nbsp <b style="color: white;">&#8377;150 </b> rupees per Individual
+          <br>
+          Includes Breakfast and Dinner
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+          --   <button type="button" class="btn btn-primary">Save changes</button>--
+        </div>
+      </div>
+    </div>
+  </div>
+  --------------------------------------------- /Modal -------------------------------------
+</body> -->
+
+<body>
+  <div class="row">
+    <div class=" register1">
+      <a href="./index.html" id="ff12" style="color: white; font-size: 1.7rem;text-decoration:none;"><i
+          class="fas fa-angle-left"></i> Register</a>
+    </div>
+  
+  <div class="reg">
+    <h1>Registration starts from 12th Feb</h1>
+  </div>
+</body>
+
+</html>
